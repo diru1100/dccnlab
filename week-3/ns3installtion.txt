@@ -1,0 +1,40 @@
+﻿
+
+Ns3.28 installation
+
+Step 1
+	sudo su
+	sudo apt-get update 
+	sudo apt-get upgrade
+
+sudo apt-get install gcc g++ python python-dev mercurial python-setuptools git qt5-default gdb valgrind uncrustify doxygen graphviz imagemagick  texlive texlive-extra-utils texlive-latex-extra texlive-font-utils texlive-lang-portuguese dvipng
+
+
+
+Step 2 --Download ns3.28 extract
+    • open the below url in browser and download ns allinone 3.28.
+          https://www.nsnam.org/ns-3-28/download/ 
+     • extract the downloaded file
+
+
+
+	cd Downloads
+       create folder xxxxx
+       mv ns-allinone-3.28.tar.bz2 /xxxxx
+Step 3
+	tar jxvf ns-allinone-3.28.tar.bz2
+	cd  ns-allinone-3.28
+	sudo ./build.py --enable-examples --enable-tests
+
+Step 4 
+
+	cd ns-3.28
+	./waf --run examples/wireless/mixed-wired-wireless
+	or
+	./waf --run examples/energy/energy-model-example
+
+
+cd..
+cd netanim3.108
+./NetAnim
+Open .xml file and animation is started.
